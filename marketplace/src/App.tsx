@@ -13,10 +13,10 @@ function App() {
           base: `"nav" "main"`,
           lg: `"nav nav" "aside main"`,
         }}
+        textColor="black"
       >
-        <GridItem area={"nav"}>
+        <GridItem area={"nav"} bg="Cornsilk">
           <NavBar />
-          Nav
         </GridItem>
         <Show above="lg">
           <GridItem area={"aside"} bg="DimGray" textColor="white">
