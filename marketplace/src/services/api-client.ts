@@ -1,8 +1,9 @@
 import axios from "axios";
+import connection from "./apikey";
 
 export default axios.create({
     baseURL: "https://api.rawg.io/api",
     params: {
-        key: "9b997357cc814d958b30d84ea4633785"
+        key: connection.apikey
     }
 })
