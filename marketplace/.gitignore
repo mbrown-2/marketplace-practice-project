@@ -24,4 +24,4 @@ dist-ssr
 *.sw?
 
 # Ignore apikey
-./src/services/apikey.ts
+src/services/apikey.ts
