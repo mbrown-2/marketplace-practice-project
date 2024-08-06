@@ -15,7 +15,7 @@ export interface Game {
     released: string;
     tba: boolean;
     background_image: string;
-    rating: number;
+    metacritic: number;
     ratings_count: number;
     parent_platforms: { platform: Platform }[];
   }
