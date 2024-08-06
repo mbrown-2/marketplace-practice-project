@@ -1,4 +1,4 @@
-import { Badge, HStack, Text } from "@chakra-ui/react";
+import { Badge, Text, VStack } from "@chakra-ui/react";
 
 interface Props {
   score: number;
@@ -10,8 +10,9 @@ const CriticScore = ({ score, numReviews }: Props) => {
 
   return (
     <>
-      <HStack>
+      <VStack>
         <Badge
+          marginBottom="-5px"
           fontSize="14px"
           paddingX={2}
           borderRadius={10}
@@ -22,7 +23,7 @@ const CriticScore = ({ score, numReviews }: Props) => {
         <Text fontSize="xs">
           <i>({numReviews} reviews)</i>
         </Text>
-      </HStack>
+      </VStack>
     </>
   );
 };
