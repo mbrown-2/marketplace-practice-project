@@ -15,6 +15,12 @@ function App() {
           base: `"nav" "main"`,
           lg: `"nav nav" "aside main"`,
         }}
+        templateColumns={{
+          // Base scenario: one column, vs. two for larger device screens
+          base: "1fr", // "1 fraction" --> takes all space
+          lg: "200px 1fr", // Where "1fr" will stretch to take rest of All-200px pixels
+          xl: "200px 1fr",
+        }}
       >
         <GridItem area={"nav"}>
           <NavBar />
