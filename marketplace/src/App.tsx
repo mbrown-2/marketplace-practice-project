@@ -3,10 +3,15 @@ import { Grid, GridItem } from "@chakra-ui/react";
 import NavBar from "./Components/NavBar";
 import GameGrid from "./Components/GameGrid";
 import GenreList from "./Components/GenreList";
+import { useState } from "react";
+import { Genre } from "./hooks/useGenres";
 
 // Initial NavBar background: bg="Cornsilk"
 
 function App() {
+  // Need to bridge onClick in GenreList with App component...
+  const [selectedGenre, setSelectedGenre] = useState<Genre | null>(null);
+
   return (
     <>
       <Grid
@@ -27,11 +32,11 @@ function App() {
         </GridItem>
         <Show above="lg">
           <GridItem area={"aside"} paddingX={5}>
-            <GenreList />
+            <GenreList onSelectGenre={(genre) => setSelectedGenre(genre)} />
           </GridItem>
         </Show>
         <GridItem area={"main"} bg="#2F4F4F" textColor="white">
-          <GameGrid />
+          <GameGrid selectedGenre={selectedGenre} />
         </GridItem>
       </Grid>
 

@@ -17,8 +17,11 @@
 - Chakra-UI
 
 ### Other
+- Axios
 - Rawg.io (API)
 - Vercel
+
+### Languages
 - Typescript
 - JavaScript
 - CSS
