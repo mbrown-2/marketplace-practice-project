@@ -1,4 +1,4 @@
-import { Button, Show } from "@chakra-ui/react";
+import { Button, HStack, Show } from "@chakra-ui/react";
 import { Grid, GridItem } from "@chakra-ui/react";
 import NavBar from "./Components/NavBar";
 import GameGrid from "./Components/GameGrid";
@@ -7,6 +7,7 @@ import { useState } from "react";
 import { Genre } from "./hooks/useGenres";
 import PlatformSelector from "./Components/PlatformSelector";
 import { Platform } from "./hooks/useGames";
+import SortSelector from "./Components/SortSelector";
 
 // Initial NavBar background: bg="Cornsilk"
 
@@ -58,12 +59,15 @@ function App() {
           </GridItem>
         </Show>
         <GridItem area={"main"} bg="#2F4F4F" textColor="white">
-          <PlatformSelector
-            selectedPlatform={selectionQuery.platform}
-            onSelectPlatform={(platform) =>
-              setSelectionQuery({ ...selectionQuery, platform })
-            }
-          />
+          <HStack spacing={5} margin={2}>
+            <PlatformSelector
+              selectedPlatform={selectionQuery.platform}
+              onSelectPlatform={(platform) =>
+                setSelectionQuery({ ...selectionQuery, platform })
+              }
+            />
+            <SortSelector />
+          </HStack>
           <GameGrid userSelection={selectionQuery} />
         </GridItem>
       </Grid>
