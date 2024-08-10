@@ -20,7 +20,7 @@ const CriticScore = ({ score, numReviews }: Props) => {
         >
           {score}
         </Badge>
-        <Text fontSize="xs">
+        <Text whiteSpace="nowrap" fontSize="xs">
           <i>({numReviews} reviews)</i>
         </Text>
       </VStack>
