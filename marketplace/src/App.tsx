@@ -1,4 +1,4 @@
-import { Button, HStack, Show } from "@chakra-ui/react";
+import { Box, Button, HStack, Show } from "@chakra-ui/react";
 import { Grid, GridItem } from "@chakra-ui/react";
 import NavBar from "./Components/NavBar";
 import GameGrid from "./Components/GameGrid";
@@ -8,6 +8,7 @@ import { Genre } from "./hooks/useGenres";
 import PlatformSelector from "./Components/PlatformSelector";
 import { Platform } from "./hooks/useGames";
 import SortSelector from "./Components/SortSelector";
+import GameHeading from "./Components/GameHeading";
 
 // Where previous state hook variables/functions ( i.e. selectedGenre, selectedPlatform) have been encapsulated into.
 // All-purpose interface for handling user actions between app and appropriate calls to API.
@@ -57,20 +58,23 @@ function App() {
           </GridItem>
         </Show>
         <GridItem area={"main"} bg="#2F4F4F" textColor="white">
-          <HStack spacing={5} margin={2}>
-            <PlatformSelector
-              selectedPlatform={selectionQuery.platform}
-              onSelectPlatform={(platform) =>
-                setSelectionQuery({ ...selectionQuery, platform })
-              }
-            />
-            <SortSelector
-              sortOrder={selectionQuery.sortOrder}
-              onSelectSortOrder={(sortOrder) =>
-                setSelectionQuery({ ...selectionQuery, sortOrder })
-              }
-            />
-          </HStack>
+          <Box padding={2}>
+            <GameHeading userQuery={selectionQuery} />
+            <HStack>
+              <PlatformSelector
+                selectedPlatform={selectionQuery.platform}
+                onSelectPlatform={(platform) =>
+                  setSelectionQuery({ ...selectionQuery, platform })
+                }
+              />
+              <SortSelector
+                sortOrder={selectionQuery.sortOrder}
+                onSelectSortOrder={(sortOrder) =>
+                  setSelectionQuery({ ...selectionQuery, sortOrder })
+                }
+              />
+            </HStack>
+          </Box>
           <GameGrid userSelection={selectionQuery} />
         </GridItem>
       </Grid>
