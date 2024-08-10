@@ -15,6 +15,7 @@ import SortSelector from "./Components/SortSelector";
 export interface UserQuery {
   genre: Genre | null;
   platform: Platform | null;
+  sortOrder: string;
 }
 
 function App() {
@@ -22,13 +23,6 @@ function App() {
   const [selectionQuery, setSelectionQuery] = useState<UserQuery>(
     {} as UserQuery
   );
-
-  /*
-  const [selectedGenre, setSelectedGenre] = useState<Genre | null>(null);
-  const [selectedPlatform, setSelectedPlatform] = useState<Platform | null>(
-    null
-  );
-*/
 
   return (
     <>
@@ -66,7 +60,12 @@ function App() {
                 setSelectionQuery({ ...selectionQuery, platform })
               }
             />
-            <SortSelector />
+            <SortSelector
+              sortOrder={selectionQuery.sortOrder}
+              onSelectSortOrder={(sortOrder) =>
+                setSelectionQuery({ ...selectionQuery, sortOrder })
+              }
+            />
           </HStack>
           <GameGrid userSelection={selectionQuery} />
         </GridItem>
