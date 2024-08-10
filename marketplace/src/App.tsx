@@ -5,12 +5,17 @@ import GameGrid from "./Components/GameGrid";
 import GenreList from "./Components/GenreList";
 import { useState } from "react";
 import { Genre } from "./hooks/useGenres";
+import PlatformSelector from "./Components/PlatformSelector";
+import { Platform } from "./hooks/useGames";
 
 // Initial NavBar background: bg="Cornsilk"
 
 function App() {
   // Need to bridge onClick in GenreList with App component...
   const [selectedGenre, setSelectedGenre] = useState<Genre | null>(null);
+  const [selectedPlatform, setSelectedPlatform] = useState<Platform | null>(
+    null
+  );
 
   return (
     <>
@@ -39,7 +44,14 @@ function App() {
           </GridItem>
         </Show>
         <GridItem area={"main"} bg="#2F4F4F" textColor="white">
-          <GameGrid selectedGenre={selectedGenre} />
+          <PlatformSelector
+            selectedPlatform={selectedPlatform}
+            onSelectPlatform={(platform) => setSelectedPlatform(platform)}
+          />
+          <GameGrid
+            selectedPlatform={selectedPlatform}
+            selectedGenre={selectedGenre}
+          />
         </GridItem>
       </Grid>
 
