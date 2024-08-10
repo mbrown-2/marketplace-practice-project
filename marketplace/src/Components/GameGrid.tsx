@@ -13,7 +13,7 @@ const GameGrid = ({ userSelection }: Props) => {
   const { data, error, isLoading } = useGames(userSelection);
   // Local variable is enough. Not trying to load a skeleton for every possible tile.
   // Would defeat purpose of the skeleton "waiting" after all...
-  const skeletons = [1, 2, 3, 4, 5, 6];
+  const skeletons = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
   return (
     <>
