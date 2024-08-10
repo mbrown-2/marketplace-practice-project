@@ -10,12 +10,24 @@ import { Platform } from "./hooks/useGames";
 
 // Initial NavBar background: bg="Cornsilk"
 
+// Encapsulate two state variables (selectedGenre, selectedPlatform) into a query engine.
+export interface UserQuery {
+  genre: Genre | null;
+  platform: Platform | null;
+}
+
 function App() {
-  // Need to bridge onClick in GenreList with App component...
+  // Create generic
+  const [selectionQuery, setSelectionQuery] = useState<UserQuery>(
+    {} as UserQuery
+  );
+
+  /*
   const [selectedGenre, setSelectedGenre] = useState<Genre | null>(null);
   const [selectedPlatform, setSelectedPlatform] = useState<Platform | null>(
     null
   );
+*/
 
   return (
     <>
@@ -38,20 +50,21 @@ function App() {
         <Show above="lg">
           <GridItem area={"aside"} paddingX={5}>
             <GenreList
-              highlightedGenre={selectedGenre}
-              onSelectGenre={(genre) => setSelectedGenre(genre)}
+              highlightedGenre={selectionQuery.genre}
+              onSelectGenre={(genre) =>
+                setSelectionQuery({ ...selectionQuery, genre })
+              }
             />
           </GridItem>
         </Show>
         <GridItem area={"main"} bg="#2F4F4F" textColor="white">
           <PlatformSelector
-            selectedPlatform={selectedPlatform}
-            onSelectPlatform={(platform) => setSelectedPlatform(platform)}
+            selectedPlatform={selectionQuery.platform}
+            onSelectPlatform={(platform) =>
+              setSelectionQuery({ ...selectionQuery, platform })
+            }
           />
-          <GameGrid
-            selectedPlatform={selectedPlatform}
-            selectedGenre={selectedGenre}
-          />
+          <GameGrid userSelection={selectionQuery} />
         </GridItem>
       </Grid>
 
