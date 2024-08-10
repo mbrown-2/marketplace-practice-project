@@ -9,13 +9,13 @@ import PlatformSelector from "./Components/PlatformSelector";
 import { Platform } from "./hooks/useGames";
 import SortSelector from "./Components/SortSelector";
 
-// Initial NavBar background: bg="Cornsilk"
-
-// Encapsulate two state variables (selectedGenre, selectedPlatform) into a query engine.
+// Where previous state hook variables/functions ( i.e. selectedGenre, selectedPlatform) have been encapsulated into.
+// All-purpose interface for handling user actions between app and appropriate calls to API.
 export interface UserQuery {
   genre: Genre | null;
   platform: Platform | null;
   sortOrder: string;
+  searchText: string;
 }
 
 function App() {
@@ -40,7 +40,11 @@ function App() {
         }}
       >
         <GridItem area={"nav"}>
-          <NavBar />
+          <NavBar
+            onSearch={(searchText) =>
+              setSelectionQuery({ ...selectionQuery, searchText })
+            }
+          />
         </GridItem>
         <Show above="lg">
           <GridItem area={"aside"} paddingX={5}>

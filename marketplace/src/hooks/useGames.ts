@@ -24,10 +24,11 @@ const useGames = (userQuery: UserQuery) => {
     params: { 
       genres: userQuery.genre?.id, 
       platforms: userQuery.platform?.id,
-      ordering: userQuery.sortOrder
+      ordering: userQuery.sortOrder,
+      search: userQuery.searchText
     }
   }, 
-  [userQuery.genre?.id, userQuery.platform?.id, userQuery.sortOrder]);
+  [userQuery.genre?.id, userQuery.platform?.id, userQuery.sortOrder, userQuery.searchText]);
 }
 
 export default useGames;
