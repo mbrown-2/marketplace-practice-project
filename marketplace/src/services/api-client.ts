@@ -5,6 +5,6 @@ import axios from "axios";
 export default axios.create({
     baseURL: "https://api.rawg.io/api",
     params: {
-        key: process.env.apikey //connection.apikey
+        key: `${process.env.API_TOKEN}` //connection.apikey
     }
 })
