@@ -25,3 +25,4 @@ dist-ssr
 
 # Ignore apikey for security.
 src/services/apikey.ts
+.env*.local
