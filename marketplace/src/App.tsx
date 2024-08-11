@@ -57,7 +57,7 @@ function App() {
             />
           </GridItem>
         </Show>
-        <GridItem area={"main"} bg="#2F4F4F" textColor="white">
+        <GridItem area={"main"}>
           <Box padding={2}>
             <GameHeading userQuery={selectionQuery} />
             <HStack>
@@ -78,8 +78,6 @@ function App() {
           <GameGrid userSelection={selectionQuery} />
         </GridItem>
       </Grid>
-
-      <Button colorScheme="blue">Button</Button>
     </>
   );
 }
