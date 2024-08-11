@@ -1,8 +1,5 @@
 # marketplace-practice-project
 
-## Project link:
-https://marketplace-kzwj7njvm-mbrown-2s-projects.vercel.app/
-
 ## Goal:
 - More practice with components, basic API calls, object interfaces, UI layouts, dynamic rendering, state hooks, and more.
 - It's still just the start so far. The project begins based on tutorials provided by codewithmosh.com
