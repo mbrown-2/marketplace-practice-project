@@ -17,6 +17,8 @@ export interface Game {
     ratings_count: number;
     parent_platforms: { platform: Platform }[];
     ordering: string;
+    rating_top: number;   // whole
+    rating: number;       // floating
   }
   
 const useGames = (userQuery: UserQuery) => {
