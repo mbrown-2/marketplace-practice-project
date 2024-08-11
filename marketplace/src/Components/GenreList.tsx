@@ -18,6 +18,7 @@ interface Props {
 const GenreList = ({ onSelectGenre, highlightedGenre }: Props) => {
   const { data, isLoading, error } = useGenres();
 
+  // Can be removed after shfiting to static data.
   if (error) return null;
   if (isLoading) return <Spinner />;
 
