@@ -1,6 +1,5 @@
 import axios from "axios";
-import connection from "./apikey"
-import process from "Vercel"
+// import connection from "./apikey"
 
 
 export default axios.create({
