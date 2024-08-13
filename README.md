@@ -3,6 +3,7 @@
 ## Project link:
 https://marketplace-kzwj7njvm-mbrown-2s-projects.vercel.app/
 
+
 ## Goal:
 - More practice with components, basic API calls, object interfaces, UI layouts, dynamic rendering, state hooks, and more.
 - It's still just the start so far. The project begins based on tutorials provided by codewithmosh.com
@@ -29,6 +30,7 @@ https://marketplace-kzwj7njvm-mbrown-2s-projects.vercel.app/
 - JavaScript
 - CSS
 - HTML
+<<<<<<< HEAD
 
 
 ### Steps for running.
@@ -49,3 +51,5 @@ https://marketplace-kzwj7njvm-mbrown-2s-projects.vercel.app/
 For any inline comments found scattered across my code, feel free to ignore. These are merely
 notes-to-self that I left behind for the case of studying/reviewing the core fundamentals and
 details of my code.
+=======
+>>>>>>> 5472819033777173138faf1f9b7caa10e81b6855
