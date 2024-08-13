@@ -27,6 +27,7 @@
 - CSS
 - HTML
 
+## Part 1
 
 ### Steps for running.
 
@@ -39,9 +40,30 @@
 > npm i @tanstack/react-query@4.28
 ```
 
+For UI components with Chakra-UI, run the following.
+```
+npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion
+```
+[Click here for documentation on Chakra-UI installation + more](https://v2.chakra-ui.com/getting-started)
+
+### Primary lessons and implementations
+
+React hooks
+- useState
+- useEffect
+- useRef
+
+
 2. ...
 
-### Personal notes:
+
+## Part 2
+
+Software utilized:
+- @tanstack/react-query
+- JQuery
+
+## Personal Notes
 
 For any inline comments found scattered across my code, feel free to ignore. These are merely
 notes-to-self that I left behind for the case of studying/reviewing the core fundamentals and
