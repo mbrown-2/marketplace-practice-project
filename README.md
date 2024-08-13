@@ -26,7 +26,6 @@
 - JavaScript
 - CSS
 - HTML
-<<<<<<< HEAD
 
 
 ### Steps for running.
@@ -42,10 +41,8 @@
 
 2. ...
 
-### Personal notes...
+### Personal notes:
 
 For any inline comments found scattered across my code, feel free to ignore. These are merely
 notes-to-self that I left behind for the case of studying/reviewing the core fundamentals and
 details of my code.
-=======
->>>>>>> 5472819033777173138faf1f9b7caa10e81b6855
