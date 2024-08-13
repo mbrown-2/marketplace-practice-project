@@ -63,6 +63,16 @@ Software utilized:
 - @tanstack/react-query
 - JQuery
 
+
+### Key goals
+
+- Encapsulating layers of application
+  - Components : using hooks to fetch and update data
+  - Custom Hooks: using HTTP services to fetch/update both data and caching
+  - HTTP Services : instances of API clients required for working with objects
+  - API Clients : where HTTP requests are handled and sent to the backend
+
+
 ## Personal Notes
 
 For any inline comments found scattered across my code, feel free to ignore. These are merely
