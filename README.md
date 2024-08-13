@@ -29,3 +29,23 @@ https://marketplace-kzwj7njvm-mbrown-2s-projects.vercel.app/
 - JavaScript
 - CSS
 - HTML
+
+
+### Steps for running.
+
+1. Be sure to cd into the 'marketplace' directory before making any of the following local installations.
+
+```
+> npm i vite
+> npm i axios
+> npm i bootstrap
+> npm i @tanstack/react-query@4.28
+```
+
+2. ...
+
+### Personal notes...
+
+For any inline comments found scattered across my code, feel free to ignore. These are merely
+notes-to-self that I left behind for the case of studying/reviewing the core fundamentals and
+details of my code.
