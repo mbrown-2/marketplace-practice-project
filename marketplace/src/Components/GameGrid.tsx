@@ -19,7 +19,7 @@ const GameGrid = ({ userSelection }: Props) => {
     <>
       {error && (
         <Text>
-          <b>Encountered problem:</b> {error}
+          <b>Encountered problem:</b> {error.message}
         </Text>
       )}
       <SimpleGrid
@@ -33,7 +33,7 @@ const GameGrid = ({ userSelection }: Props) => {
               <GameCardSkeleton />
             </GameCardContainer>
           ))}
-        {data.map((game) => (
+        {data?.results.map((game) => (
           <GameCardContainer key={game.id}>
             <GameCard game={game} />
           </GameCardContainer>

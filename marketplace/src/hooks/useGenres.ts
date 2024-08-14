@@ -11,13 +11,6 @@ export interface Genre {
     image_background: string;
 }
 
-// Initial implementation: loading "snapshot" of data, instead of live HTTP connection.
-// const useGenres = () => ({data: genres, isLoading: false, error: null});
-
-// considered: useData<Genre>("/genres"),
-// Not good: useData is a generic implementation of a state hook for interacting with the HTTP endpoint
-// Instead:  access HTTP endpoint directly via useQuery, not useQuery --> hook --> HTTP
-
 const useGenres = () => useQuery({
     queryKey: ["genres"],
     queryFn: () => apiClient.get<FetchResponse<Genre>>("/genres").then(res => res.data),
