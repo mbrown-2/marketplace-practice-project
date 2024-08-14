@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { UserQuery } from "../App";
 import apiClient from "../services/api-client";
-import { FetchResponse } from "./useData";
+import { FetchResponse } from "../services/api-client";
 
 export interface Platform {
   id: number;
@@ -17,7 +17,7 @@ export interface Game {
     background_image: string;
     metacritic: number;
     ratings_count: number;
-    parent_platforms: { platform: Platform }[];
+    parent_platforms: { platform: Platform }[] | null;
     ordering: string;
     rating_top: number;   // whole
     rating: number;       // floating
