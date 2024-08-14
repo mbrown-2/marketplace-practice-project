@@ -3,7 +3,7 @@ import apiClient from "../services/api-client";
 import { AxiosRequestConfig, CanceledError } from "axios";
 
 // replace /genres, /games with a generic /[endpoint_name]
-interface FetchResponse<T> {
+export interface FetchResponse<T> {
     count: number;
     results: T[];
   }
