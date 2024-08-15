@@ -2,7 +2,8 @@ import axios, { AxiosRequestConfig } from "axios";
 // import connection from "./apikey"
 
 export interface FetchResponse<T> {
-    count: number;
+    count?: number;
+    next?: string | null;
     results: T[];
 }
 
@@ -11,7 +12,7 @@ const axiosInstance = axios.create({
     params: {
         key:  import.meta.env.VITE_API_TOKEN
     }
-})
+});
 
 class APIClient<T> {
     endpoint: string;
