@@ -29,8 +29,8 @@ export interface Game {
       queryFn: ({ pageParam = 1 }) => 
         connection.getAll({
           params: {
-            genres: userQuery.genre?.id, 
-            parent_platforms: userQuery.platform?.id,
+            genres: userQuery.genreId, 
+            parent_platforms: userQuery.platformId,
             ordering: userQuery.sortOrder,
             search: userQuery.searchText,
             page: pageParam

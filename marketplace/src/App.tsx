@@ -13,8 +13,8 @@ import GameHeading from "./Components/GameHeading";
 // Where previous state hook variables/functions ( i.e. selectedGenre, selectedPlatform) have been encapsulated into.
 // All-purpose interface for handling user actions between app and appropriate calls to API.
 export interface UserQuery {
-  genre: Genre | null;
-  platform: Platform | null;
+  genreId?: number; // old implementation: genre: Genre | null;
+  platformId?: number; // old implementation: platform: Platform | null;
   sortOrder: string;
   searchText: string;
 }
@@ -50,9 +50,9 @@ function App() {
         <Show above="lg">
           <GridItem area={"aside"} paddingX={2}>
             <GenreList
-              highlightedGenre={selectionQuery.genre}
+              selectedGenreId={selectionQuery.genreId}
               onSelectGenre={(genre) =>
-                setSelectionQuery({ ...selectionQuery, genre })
+                setSelectionQuery({ ...selectionQuery, genreId: genre.id })
               }
             />
           </GridItem>
@@ -62,9 +62,12 @@ function App() {
             <GameHeading userQuery={selectionQuery} />
             <HStack>
               <PlatformSelector
-                selectedPlatform={selectionQuery.platform}
+                selectedPlatformId={selectionQuery.platformId}
                 onSelectPlatform={(platform) =>
-                  setSelectionQuery({ ...selectionQuery, platform })
+                  setSelectionQuery({
+                    ...selectionQuery,
+                    platformId: platform.id,
+                  })
                 }
               />
               <SortSelector
