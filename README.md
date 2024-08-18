@@ -73,6 +73,10 @@ Topics:
   - Contexts
   - ContextProviders
 
+## Part 3
+
+- Router Providers for dynamic rendering
+
 ### Key goals
 
 - Encapsulating layers of application
