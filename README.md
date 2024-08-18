@@ -62,7 +62,16 @@ React hooks
 Software utilized:
 - @tanstack/react-query
 - JQuery
+- Zustand
 
+Topics:
+- Back-End Data Retrieval and Querying
+  - useQuery
+  - useInfiniteQuery
+- Client-side State Management
+  - Reducers
+  - Contexts
+  - ContextProviders
 
 ### Key goals
 

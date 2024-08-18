@@ -1,9 +1,9 @@
 
 import { useInfiniteQuery } from "@tanstack/react-query";
-import { UserQuery } from "../App";
 import APIClient, { FetchResponse } from "../services/api-client";
 import { Platform } from "./usePlatforms";
 import ms from "ms";
+import useGameQueryStore from "../Components/store";
 
 const connection = new APIClient<Game>("/games");
 
@@ -24,8 +24,9 @@ export interface Game {
   // Key difference (useQuery vs useInfinteQuery)
   // useQuery --> queryKey, queryFn
   // Infinite --> require pages (every load of new data is an additional frame from a list of records)
-  const useGames = (userQuery: UserQuery) =>
-    useInfiniteQuery<FetchResponse<Game>, Error>({
+  const useGames = () => {
+    const userQuery = useGameQueryStore(s => s.userQuery);
+    return useInfiniteQuery<FetchResponse<Game>, Error>({
       queryKey: ["games", userQuery],
       queryFn: ({ pageParam = 1 }) => 
         connection.getAll({
@@ -44,5 +45,5 @@ export interface Game {
       initialPageParam: 1,
       staleTime: ms("24hrs")
     })
-
+  }
 export default useGames;

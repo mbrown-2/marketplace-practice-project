@@ -2,15 +2,10 @@ import { Box, Button, SimpleGrid, Text } from "@chakra-ui/react";
 import GameCard from "./GameCard";
 import GameCardSkeleton from "./GameCardSkeleton";
 import GameCardContainer from "./GameCardContainer";
-import { UserQuery } from "../App";
 import useGames from "../hooks/useGames";
 import React from "react";
 
-interface Props {
-  userSelection: UserQuery;
-}
-
-const GameGrid = ({ userSelection }: Props) => {
+const GameGrid = () => {
   const {
     data,
     error,
@@ -18,7 +13,7 @@ const GameGrid = ({ userSelection }: Props) => {
     isFetchingNextPage,
     fetchNextPage,
     hasNextPage,
-  } = useGames(userSelection);
+  } = useGames();
   // Local variable is enough. Not trying to load a skeleton for every possible tile.
   // Would defeat purpose of the skeleton "waiting" after all...
   const skeletons = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
