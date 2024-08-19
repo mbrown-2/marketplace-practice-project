@@ -1,27 +1,11 @@
 
 import { useInfiniteQuery } from "@tanstack/react-query";
 import APIClient, { FetchResponse } from "../services/api-client";
-import { Platform } from "./usePlatforms";
 import ms from "ms";
 import useGameQueryStore from "../Components/store";
+import { Game } from "../entities/Game";
 
 const connection = new APIClient<Game>("/games");
-
-export interface Game {
-    id: number;
-    name: string;
-    slug: string;
-    description_raw: string;
-    released: string;
-    tba: boolean;
-    background_image: string;
-    metacritic: number;
-    ratings_count: number;
-    parent_platforms: { platform: Platform }[] | null;
-    ordering: string;
-    rating_top: number;   // whole
-    rating: number;       // floating
-  }
 
   // Key difference (useQuery vs useInfinteQuery)
   // useQuery --> queryKey, queryFn
