@@ -10,6 +10,7 @@ const connection = new APIClient<Game>("/games");
 export interface Game {
     id: number;
     name: string;
+    slug: string;
     released: string;
     tba: boolean;
     background_image: string;

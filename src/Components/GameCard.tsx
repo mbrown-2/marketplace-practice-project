@@ -4,6 +4,7 @@ import PlatformIconList from "./PlatformIconList";
 import CriticScore from "./CriticScore";
 import getCroppedImageUrl from "../services/image-url";
 import Emoji from "./Emoji";
+import { Link } from "react-router-dom";
 
 interface Props {
   game: Game;
@@ -16,7 +17,9 @@ const GameCard = ({ game }: Props) => {
         <Image src={getCroppedImageUrl(game.background_image)} />
         <CardBody>
           <Heading fontSize="2xl" marginBottom={2}>
-            {game.name}
+            <Link to={"/games/" + game.slug}>
+              <Text _hover={{ textDecoration: "underline" }}>{game.name}</Text>
+            </Link>
           </Heading>
           <Text as="i">Release date: {game.released}</Text>
           <HStack justifyContent="space-between">
