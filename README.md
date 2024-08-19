@@ -1,15 +1,45 @@
-# marketplace-practice-project
+# Video Game Marketplace - Practice Project
 
-## Goal:
-- More practice with components, basic API calls, object interfaces, UI layouts, dynamic rendering, state hooks, and more.
-- It's still just the start so far. The project begins based on tutorials provided by codewithmosh.com
+### Goal:
 
-## Personal roadmap:
-1. Complete the course and solidify foundations and understanding.
-2. Modify, rebuild, and enhance UI and layout. Introduce original functionality (i.e. more pages, popups, animations, and more API calls).
-3. Leverage as part of personal portfolio --> original website to contain this plus other personal projects
+A web development, programming project based on curriculum provided by [Code with Mosh](https://codewithmosh.com/). The goal of this project is to utilize various React tools to construct an application that parses [RAWG's video game API database](https://rawg.io/) and dynamically render an interactive website filled with numerous components.
 
-## todo - gotta jam out some text here, of course
+The primary focus of this application is to allow the user to search through a unique catalogue of video games using either a custom input or mix of pre-determined filters. Each action will query the RAWG API and dynamically render a series of video game results. Each result can be clicked to view its respective details.
+
+The information below includes a list of subjects and tools that were used/applied in this project, a personal roadmap of custom features I want to implement next, and installation steps should you wish to download and run the code locally.
+
+---
+
+### Implementation - Part 1
+
+### Implementation - Part 2
+
+### Implementation - Part 3
+
+---
+
+### Personal roadmap:
+
+- [ ] Turn "(#) reviews" into a custom component that appears as a mini pop-up modal should the user click/hover over the Metacritic badge.
+- [ ] Update the webp logo in the top-right of the application (will use Figma for editing and exporting).
+- [ ] Create additional Figma designs and patterns to customize the borders of the screen.
+- [ ] Create custom Light Mode color scheme.
+- [ ] Add translation animation to selected Genre in the Genre pane.
+- [ ] Refactor spacing of content beneath image for each video game tile.
+- [ ] Implement "Favorites functionality"
+  - [ ] Add clickable heart emote on game tile and detail page.
+  - [ ] Apply a "Favorites" dropdown component in navbar. Click/hover over to show list of favorites.
+  - [ ] Click a favorite game to jump immediately to its details page.
+  - [ ] Favorite tiles should have a different highlight.
+- [ ] Add dynamic shadow/border highlight (still deciding what specifically) when mouse hovers over a game tile.
+- [ ] Add fallback text for when 0 search results appear.
+- [ ] Improve 404 Error page.
+
+---
+
+### How to Install
+
+Alright, so you've made it this far down the README...
 
 ### Software utilized
 - Vite
