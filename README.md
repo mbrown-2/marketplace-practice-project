@@ -12,9 +12,13 @@ The information below includes a list of subjects and tools that were used/appli
 
 ### Implementation - Part 1
 
+- <ins>Summary:</ins> Organize the skeleton, interface, and components of the website.
+- <ins>Languages:</ins> HTML, CSS, JavaScript, TypeScript
+- <ins>Tools:</ins> React, Vite, Bootstrap, Chakra-UI
+
 ### Implementation - Part 2
 
-### Implementation - Part 3
+
 
 ---
 
