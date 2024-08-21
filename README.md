@@ -12,13 +12,15 @@ The information below includes a list of subjects and tools that were used/appli
 
 ### Implementation - Part 1
 
-- <ins>Summary:</ins> Organize the skeleton, interface, and components of the website.
+- <ins>Summary:</ins> Organizing the skeleton of the DOM, creating core custom components, and utilizing state objects to handle early API requests.
 - <ins>Languages:</ins> HTML, CSS, JavaScript, TypeScript
-- <ins>Tools:</ins> React, Vite, Bootstrap, Chakra-UI
+- <ins>Tools:</ins> React, Vite, Bootstrap, Chakra-UI, Axios
 
 ### Implementation - Part 2
 
-
+- <ins>Summary:</ins> Expanding upon the previous part by replacing/encapsulating interfaces and state objects with generic-type API request handlers and querying for dynamic fetching/rendering. Meanwhile, applying routing to navigate users between pages and caching to minimize reloading search results.
+- <ins>Languages:</ins> HTML, CSS, JavaScript, TypeScript
+- <ins>Tools:</ins> React Router, Tanstack Query, Zustand
 
 ---
 
@@ -41,7 +43,7 @@ The information below includes a list of subjects and tools that were used/appli
 
 ---
 
-### How to Install
+### How to Install and Run
 
 Alright, so you've made it this far down the README...
 
